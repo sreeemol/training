@@ -6,6 +6,10 @@ from django.http import HttpResponse
 # Create your views here.
 def app(request):
     return render(request, 'index.html',{})
+def terms(request):
+    return render(request, 'terms.html',{})
+def careers(request):
+    return render(request, 'careers.html',{})	
 def contact(request):
 	if request.method == 'POST':
 		form = ContactForm(request.POST)
