@@ -1,18 +1,32 @@
 {% extends 'base.html' %}
 {% block content %}
 {% load static %}
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-md-12 text-center item careers">
+			<div class="text-homeimage">
+				<div class="maintext-image" data-scrollreveal="enter top over 1.5s after 0.1s">
+					 Join To 
+				</div>
+				<div class="subtext-image" data-scrollreveal="enter bottom over 1.7s after 0.3s">
+					Our Team
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
 <h1>
     Our vaccancies
 </h1>
+<div class = containerform>
 
-<hr>
-
-<form action="" method="post">
-	{% csrf_token %}
-	{{form}}
-	<input type="submit">
+	<form method="post" >
+		{% csrf_token %}
+		{{ form.as_p }}
+		<div>
+			<button type="submit">Submit</button>
+		</div>
 	</form>
-</hr>
-
+</div>
 
 {% endblock %}

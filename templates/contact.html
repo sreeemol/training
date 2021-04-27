@@ -2,19 +2,32 @@
 {% block content %}
 {% load static %}
 
-   
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-md-12 text-center item contact">
+			<div class="text-homeimage">
+				<div class="maintext-image" data-scrollreveal="enter top over 1.5s after 0.1s">
+					 Contact us
+				</div>
+				<div class="subtext-image" data-scrollreveal="enter bottom over 1.7s after 0.3s">
+					 for any queries by filling below
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
 
-    <h3>Customer Form</h3>
-<hr>
-
-<form action="" method="post">
-	{% csrf_token %}
-	{{form}}
-	<input type="submit">
+<h3>Customer Form</h3>
+<div class = container>
+	<form method="post" >
+		<h2>Contact Us</h2>
+		{% csrf_token %}
+		<table border="1" allign=center>
+		{{ form.as_p }}
+	</table>
+		<div>
+			<button type="submit">Submit</button>
+		</div>
 	</form>
-</hr>
-
-
-
-
+</div>
 {% endblock %}
